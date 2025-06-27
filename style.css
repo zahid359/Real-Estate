@@ -1,0 +1,658 @@
+/* Woodmart Real Estate Website Styles */
+
+:root {
+  --primary-color: #4f46e5;
+  --primary-dark: #3730a3;
+  --secondary-color: #f8fafc;
+  --dark-color: #1e293b;
+  --light-color: #f1f5f9;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-large: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color);
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* Navigation Styles */
+.navbar {
+  transition: all 0.3s ease;
+  /* padding: 1rem 0; */
+  backdrop-filter: blur(10px);
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: var(--shadow-light);
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+  color: var(--dark-color) !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 600;
+  margin: 0 1rem;
+  color: var(--dark-color) !important;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background: var(--primary-color);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="%23000" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  font-weight: 800;
+}
+
+.feature-highlight {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.feature-highlight:hover {
+  transform: translateY(-5px);
+}
+
+.building-image {
+  border-radius: 20px !important;
+  box-shadow: var(--shadow-large);
+  transition: transform 0.3s ease;
+}
+
+.building-image:hover {
+  transform: scale(1.02);
+}
+
+/* Apartment Gallery */
+.apartment-gallery .gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: var(--shadow-medium);
+}
+
+.hover-zoom {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* Service Cards */
+.service-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  height: 100%;
+}
+
+.service-card:hover {
+   background-color: white;
+   padding-left: 2vw; 
+   box-shadow: 5px 5px 10px 0px rgb(100, 100, 224);
+   transition: "transform 0.9s;";
+   cursor: pointer;
+   transform: scale(0.5s);
+   
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-color), #6366f1);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+.service-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+/* Pricing Section */
+.pricing-section {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23fff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+  pointer-events: none;
+}
+
+.pricing-card {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-card.featured {
+  border-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  background: var(--primary-color);
+  color: white;
+  padding: 5px 40px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  transform: rotate(45deg);
+}
+
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-large);
+}
+
+.pricing-icon {
+  margin-bottom: 1rem;
+}
+
+/* Investment Stages */
+.stage-card {
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease;
+}
+
+.stage-card:hover {
+   background-color: white;
+   padding-left: 2vw; 
+   box-shadow: 5px 5px 10px 0px rgb(100, 100, 224);
+   transition: "transform 0.9s;";
+   cursor: pointer;
+   transform: scale(0.5s);
+  /* transform: translateY(-5px); */
+}
+
+.stage-number {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-color), #6366f1);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.stage-number::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.stage-card:hover .stage-number::before {
+  left: 100%;
+}
+
+/* Gallery Cards */
+.gallery-card img{
+  height: 44.25vh;
+  width: 100%;
+}
+.gallery-card {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: var(--shadow-medium);
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+}
+
+/* About Section */
+.stat-item {
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: scale(1.05);
+}
+
+.feature-item {
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateX(5px);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), #6366f1);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary-dark), #4338ca);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+}
+
+.btn-outline-light {
+  border: 2px solid white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background: white;
+  color: var(--primary-color) !important;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+}
+
+.social-links a {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+  transition: all 0.3s ease;
+  margin-right: 0.5rem;
+}
+
+.social-links a:hover {
+  background: var(--primary-color);
+  color: white !important;
+  transform: translateY(-3px);
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: var(--shadow-medium);
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-fade-left {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.animate-fade-right {
+  animation: fadeInRight 0.8s ease forwards;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.animate-on-scroll.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Modal Styles */
+.modal-content {
+  border: none;
+  border-radius: 16px;
+  box-shadow: var(--shadow-large);
+}
+
+.modal-header {
+  background: linear-gradient(135deg, var(--primary-color), #6366f1);
+  color: white;
+  border-radius: 16px 16px 0 0;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+.form-control,
+.form-select {
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.25);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .feature-highlight {
+    margin-bottom: 1rem;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .display-5 {
+    font-size: 2rem;
+  }
+
+  .service-card,
+  .pricing-card {
+    margin-bottom: 2rem;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 0.5rem 0;
+  }
+
+  .contact-info {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .contact-info .btn {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .service-icon,
+  .stage-number {
+    width: 60px;
+    height: 60px;
+  }
+
+  .service-icon i {
+    font-size: 1.5rem;
+  }
+
+  .feature-highlight {
+    padding: 1rem;
+  }
+
+  .service-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Loading States */
+.loading {
+  opacity: 1;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.loading.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary-color), #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--primary-color), #6366f1);
+}
+
+.shadow-custom {
+  box-shadow: var(--shadow-large);
+}
+
+/* Print Styles */
+@media print {
+  .navbar,
+  .scroll-to-top,
+  .modal {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+
+  .hero-section,
+  .pricing-section {
+    background: white !important;
+    color: black !important;
+  }
+}

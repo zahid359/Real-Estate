@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elite House - Real Estate Investments</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3" style= "transition: transform 0.3s; cursor: pointer;"
+                onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'" href="#home">
+          <i class="fas fa-building text-primary me-2"  ></i >Elite House
+        </a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active fw-semibold" href="#home">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="#apartments">APARTMENTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="#services">SERVICES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="#prices">PRICES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="#about">ABOUT US</a>
+            </li>
+          </ul>
+          <button
+            class="btn btn-primary px-4 py-2 fw-semibold rounded-pill"
+            onclick="openContactModal()"
+          >
+            CALL ME NOW
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center min-vh-100 pt-5">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <div class="hero-content">
+              <h1 class="display-3 fw-bold mb-4 mt-5 animate-fade-up">
+                Real <span class="text-primary">Estate</span><br />
+                Investments
+              </h1>
+              <p
+                class="lead text-muted mb-4 animate-fade-up"
+                style="animation-delay: 0.2s"
+              >
+                We offer a range of services that run the standard of the
+                industry for both residential and commercial real estate.
+              </p>
+              <div
+                class="d-flex gap-3 mb-4 animate-fade-up"
+                style="animation-delay: 0.4s"
+              >
+                <div class="feature-highlight">
+                  <i class="fas fa-users text-primary mb-2"></i>
+                  <h6 class="fw-bold mb-1">Ease of Management</h6>
+                  <small class="text-muted"
+                    >You just buy an apartment, and a professional hotel
+                    operator will do the rest for you</small
+                  >
+                </div>
+                <div class="feature-highlight">
+                  <i class="fas fa-chart-line text-primary mb-2"></i>
+                  <h6 class="fw-bold mb-1">Guaranteed Income</h6>
+                  <small class="text-muted"
+                    >Guaranteed monthly incom is prescribed in advance in the
+                    contract selection</small
+                  >
+                </div>
+              </div>
+              <button
+                class="btn btn-primary btn-lg px-5 py-3 fw-semibold rounded-pill animate-fade-up"
+                style="animation-delay: 0.6s"
+                onclick="openContactModal()"
+              >
+                CALL ME NOW
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 mt-5">
+            <div class="hero-image animate-fade-right"
+            style="transition: transform 0.3s; cursor: pointer;"
+                onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'">
+              <img
+                src="assets/snap1.webp"
+                alt="Modern Apartment Building"
+                class="img-fluid rounded-4 shadow-lg building-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!----------------------------------------------------- Apartments Section -->
+    <section id="apartments" class="apartments-section py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="apartment-gallery">
+              <div class="row g-3">
+                <!-- <div class="col-6">
+                                <div class="gallery-item">
+                                    <img src="" alt="Modern Living Room" 
+                                         class="img-fluid rounded-3 shadow hover-zoom">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="gallery-item">
+                                    <img src="" alt="Luxury Kitchen" 
+                                         class="img-fluid rounded-3 shadow hover-zoom">
+                                </div>
+                            </div> -->
+                <div class="col-12 mt-3">
+                  <div class="gallery-item">
+                    <img
+                      src="assets/snap2.webp"
+                      alt="Apartment Balcony"
+                      class="img-fluid rounded-3 shadow hover-zoom"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="apartment-content animate-on-scroll">
+              <span class="text-primary text-uppercase fw-bold small"
+                >OUR ADVANTAGES</span
+              >
+              <h2 class="display-5 fw-bold mb-4">About Apartments</h2>
+              <p class="text-muted mb-4">
+                Experience luxury living in our thoughtfully designed apartments
+                featuring modern amenities, premium finishes, and breathtaking
+                views. Each unit is crafted with attention to detail and
+                designed for contemporary urban living.
+              </p>
+
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <h6 class="fw-bold mb-3">Our complex has:</h6>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      <span>Modern design</span>
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      <span>Top floors</span>
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      <span>Great location</span>
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      <span>Connecting</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h6 class="fw-bold mb-3">Additional features:</h6>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      <span>Laundry</span>
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      <span>Playground</span>
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check text-primary me-2"></i>
+                      <span>Great Pool</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------------------------------------------------------ 3D Gallery Section -->
+    <section class="gallery-section py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary text-uppercase fw-bold small"
+            >OUR GALLERY</span
+          >
+          <h2 class="display-5 fw-bold mb-3">3D Renderings</h2>
+          <p class="lead" style="font-size: 18px;">
+            "We deliver high-quality <b style="font-size: 20px; font-weight: 900;">3D Renderings</b> that translate architectural concepts into photorealistic visuals. Our renderings enhance project presentations, support faster approvals, and help clients visualize designs with precision and clarity—before a single brick is laid."
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-card"
+           >
+              <img
+                src="assets/G1.webp"
+                alt="Building Exterior Night"
+                class="img-fluid rounded-3 hover-zoom"
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-card"
+           >
+              <img 
+                src="assets/snap02 (1).jpg"
+                alt="High-rise Complex"
+                class="img-fluid rounded-3 hover-zoom"
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-card" 
+           >
+              <img
+                src="assets/G3.webp"
+                alt="Modern Architecture"
+                class="img-fluid rounded-3 hover-zoom"
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-card"
+            >
+              <img
+                src="assets/G4.webp"
+                alt="Luxury Building"
+                class="img-fluid rounded-3 hover-zoom"
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-card"
+           >
+              <img 
+                src="assets/snap03.jpg"
+                alt="Urban Development"
+                class="img-fluid rounded-3 hover-zoom"
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-card"
+            >
+              <img
+                src="assets/G6.webp"
+                alt="Residential Complex"
+                class="img-fluid rounded-3 hover-zoom"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ <!-------------------------------------------------------- Services Section -->
+    <section id="services" class="services-section py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary text-uppercase fw-bold small"
+            >WHAT WE OFFER</span
+          >
+          <h2 class="display-5 fw-bold mb-3">Our Services</h2>
+          <p class="lead" style="font-size: 18px;">
+            At <b style="font-size: 20px; font-weight: 900;">ELITE HOUSE</b>, we provide trusted real estate services
+            tailored to your needs. Whether you're buying, selling, or
+            investing, our experienced team offers expert guidance, market
+            insights, and a commitment to making your transaction smooth and
+            stress-free. Count on us for professionalism, transparency, and
+            results you can rely on.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card h-100 animate-on-scroll">
+              <div class="service-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <h5 class="fw-bold mb-3">Service Premises</h5>
+              <p class="text-muted">
+                Professional property management services ensuring your
+                investment is well-maintained and profitable with 24/7 support.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="service-card h-100 animate-on-scroll"
+              style=" animation-delay: 0.1s"  
+            >
+              <div class="service-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h5 class="fw-bold mb-3">Safety and Security</h5>
+              <p class="text-muted">
+                Advanced security systems with 24/7 monitoring, professional
+                security staff, and state-of-the-art access control systems.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="service-card h-100 animate-on-scroll"
+              style="animation-delay: 0.2s"
+            >
+              <div class="service-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <h5 class="fw-bold mb-3">Environmental Solutions</h5>
+              <p class="text-muted">
+                We care about the environment, which is why we use LED lightning
+                and have a charging station for electric vehicles clients
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="service-card h-100 animate-on-scroll"
+              style=" animation-delay: 0.3s"
+            >
+              <div class="service-icon">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <h5 class="fw-bold mb-3">Ease of Management</h5>
+              <p class="text-muted">
+                Streamlined property management with digital solutions,
+                automated systems, and dedicated support teams.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="service-card h-100 animate-on-scroll"
+              style="animation-delay: 0.4s"
+            >
+              <div class="service-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h5 class="fw-bold mb-3">Guaranteed Income</h5>
+              <p class="text-muted">
+                Reliable rental income with our comprehensive guarantee program
+                ensuring consistent returns on your investment.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="service-card h-100 animate-on-scroll"
+              style=" animation-delay: 0.5s"
+            >
+              <div class="service-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h5 class="fw-bold mb-3">Great Location</h5>
+              <p class="text-muted">
+                Prime locations with excellent connectivity, proximity to
+                amenities, and high growth potential for maximum investment
+                value.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!---------------------------------------------------- Prices Section -->
+    <section id="prices" class="pricing-section py-5 bg-primary text-white">
+      <div class="container">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6">
+            <div class="pricing-content">
+              <span class="text-uppercase fw-bold small opacity-75"
+                >PLANS AND PRICES</span
+              >
+              <h2 class="display-4 fw-bold mb-4">
+                Choose Your<br />
+                Apartment
+              </h2>
+              <p class="lead mb-4 opacity-90">
+                We follow the latest developments in the housing business and
+                offer you the most suitable options for your budget and
+                lifestyle preferences.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="pricing-image text-center" style="transition: transform 0.3s; cursor: pointer;"
+                onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'" >
+              <img
+                src="assets/sap5.webp"
+                alt="Luxury Apartment Interior"
+                class="img-fluid rounded-4 shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6"
+          style="transition: transform 0.3s; cursor: pointer;"
+                onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'">
+            <div
+              class="pricing-card bg-white text-dark rounded-4 p-4 h-100 hover-lift"
+            >
+              <div class="text-center mb-4">
+                <div class="pricing-icon mb-3">
+                  <i class="fas fa-home fa-3x text-primary"></i>
+                </div>
+                <h4 class="fw-bold text-primary mb-2">From $760/M2</h4>
+                <h6 class="fw-semibold mb-3">Studio Apartments</h6>
+                <p class="text-muted small">
+                  Perfect for young professionals and students. Modern
+                  amenities, efficient layouts, and premium finishes.
+                </p>
+              </div>
+              <ul class="list-unstyled mb-4">
+                <li class="mb-2">
+                  <i class="fas fa-check text-primary me-2"></i>25-35 sqm
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check text-primary me-2"></i>Modern kitchen
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check text-primary me-2"></i>High-speed
+                  internet
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check text-primary me-2"></i>24/7 security
+                </li>
+              </ul>
+              <button
+                class="btn btn-primary w-100 fw-semibold"
+                onclick="openContactModal()"
+              >
+                Get Quote
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6"
+          style="transition: transform 0.3s; cursor: pointer;"
+                onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'">
+            <div
+              class="pricing-card bg-white text-dark rounded-4 p-4 h-100 hover-lift featured"
+            >
+              <div class="featured-badge">Most Popular</div>
+              <div class="text-center mb-4">
+                <div class="pricing-icon mb-3">
+                  <i class="fas fa-building fa-3x text-primary"></i>
+                </div>
+                <h4 class="fw-bold text-primary mb-2">From $1100/M2</h4>
+                <h6 class="fw-semibold mb-3">One Bedroom</h6>
+                <p class="text-muted small">
+                  Spacious one-bedroom apartments with separate living areas,
+                  premium finishes, and modern appliances.
+                </p>
+              </div>
+              <ul class="list-unstyled mb-4">
+                <li class="mb-2">
+                  <i class="fas fa-check text-primary me-2"></i>45-65 sqm
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check text-primary me-2"></i>Separate bedroom
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check text-primary me-2"></i>Balcony/terrace
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check text-primary me-2"></i>Premium
+                  appliances
+                </li>
+              </ul>
+              <button
+                class="btn btn-primary w-100 fw-semibold"
+                onclick="openContactModal()"
+              >
+                Get Quote
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6"
+          style="transition: transform 0.3s; cursor: pointer;"
+                onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'">
+            <div
+              class="pricing-card bg-white text-dark rounded-4 p-4 h-100 hover-lift"
+            >
+              <div class="text-center mb-4">
+                <div class="pricing-icon mb-3">
+                  <i class="fas fa-city fa-3x text-primary"></i>
+                </div>
+                <h4 class="fw-bold text-primary mb-2">From $1320/M2</h4>
+                <h6 class="fw-semibold mb-3">Two Bedroom</h6>
+                <p class="text-muted small">
+                  Luxury two-bedroom apartments with high-end amenities,
+                  stunning views, and spacious living areas.
+                </p>
+              </div>
+              <ul class="list-unstyled mb-4">
+                <li class="mb-2">
+                  <i class="fas fa-check text-primary me-2"></i>75-95 sqm
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check text-primary me-2"></i>Two bedrooms
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check text-primary me-2"></i>City/ocean views
+                </li>
+                <li class="mb-2">
+                  <i class="fas fa-check text-primary me-2"></i>Luxury finishes
+                </li>
+              </ul>
+              <button
+                class="btn btn-primary w-100 fw-semibold"
+                onclick="openContactModal()"
+              >
+                Get Quote
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------------------------------------------ Investment Process -->
+    <section class="investment-section py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary text-uppercase fw-bold small"
+            >INVESTMENT STAGES</span
+          >
+          <h2 class="display-5 fw-bold mb-3">All Stages of Investment</h2>
+          <p class="lead text-muted">
+            Follow our simple 4-step process to secure your real estate
+            investment
+          </p>
+        </div>
+
+        <div class="row g-4" >
+          <div class="col-lg-3 col-md-6"
+        >
+            <div class="stage-card text-center animate-on-scroll">
+              <div class="stage-number">01</div>
+              <h5 class="fw-bold mb-3">Consultation</h5>
+              <p class="text-muted">
+                We listen to your needs and help you understand the investment
+                opportunities available in our portfolio.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="stage-card text-center animate-on-scroll"
+              style="animation-delay: 0.1s"
+            >
+              <div class="stage-number">02</div>
+              <h5 class="fw-bold mb-3">Booking Apartments</h5>
+              <p class="text-muted">
+                Reserve your preferred apartment with flexible booking options
+                and customized payment plans.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" >
+            <div
+              class="stage-card text-center animate-on-scroll"
+              style="animation-delay: 0.2s"
+            >
+              <div class="stage-number">03</div>
+              <h5 class="fw-bold mb-3">First Investment</h5>
+              <p class="text-muted">
+                Make your initial investment and begin the process of securing
+                your property with legal documentation.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div
+              class="stage-card text-center animate-on-scroll"
+              style="animation-delay: 0.3s"
+            >
+              <div class="stage-number">04</div>
+              <h5 class="fw-bold mb-3">Commissioning</h5>
+              <p class="text-muted">
+                Complete the final steps and take possession of your new
+                investment property with full support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------- About Us Section -->
+    <section id="about" class="about-section py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="about-content animate-on-scroll">
+              <span class="text-primary text-uppercase fw-bold small"
+                >ABOUT ELITE HOUSE</span
+              >
+              <h2 class="display-5 fw-bold mb-4">
+                Building Dreams, Creating Value
+              </h2>
+              <p class="text-muted mb-4">
+                With over a decade of experience in real estate development and
+                investment, Elite House has established itself as a trusted partner
+                for investors seeking reliable returns and quality properties.
+              </p>
+              <p class="text-muted mb-4">
+                Our commitment to excellence, innovative design, and customer
+                satisfaction has made us a leader in the real estate industry.
+                We pride ourselves on delivering projects that exceed
+                expectations and create lasting value.
+              </p>
+
+              <div class="row g-4 mb-4">
+                <div class="col-6">
+                  <div class="stat-item text-center" >
+                    <h3
+                      class="display-4 fw-bold text-primary counter"
+                      data-target="500"
+                    >
+                      0
+                    </h3>
+                    <p class="text-muted fw-semibold">Properties Sold</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="stat-item text-center" >
+                    <h3
+                      class="display-4 fw-bold text-primary counter"
+                      data-target="15"
+                    >
+                      0
+                    </h3>
+                    <p class="text-muted fw-semibold">Years Experience</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="feature-item d-flex align-items-center">
+                    <i class="fas fa-award text-primary me-3 fs-4"></i>
+                    <div>
+                      <h6 class="fw-bold mb-1">Award Winning</h6>
+                      <small class="text-muted">Industry recognition</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="feature-item d-flex align-items-center">
+                    <i class="fas fa-handshake text-primary me-3 fs-4"></i>
+                    <div>
+                      <h6 class="fw-bold mb-1">Trusted Partner</h6>
+                      <small class="text-muted">Reliable service</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" 
+          >
+            <div class="about-image">
+              <img 
+                src="assets/snap04.jpg"
+                alt="About Woodmart"
+                class="img-fluid rounded-4 shadow-lg hover-zoom"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!--------------------------------------------- Contact Section -->
+    <section class="contact-section py-5 bg-primary text-white">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8 mb-4 mb-lg-0">
+            <h3 class="fw-bold mb-2">Have a Question?</h3>
+            <p class="mb-0 opacity-90">
+              Call us or leave your phone number, and we will call you back
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <div class="contact-info">
+              <button
+                class="btn btn-outline-light me-3 fw-semibold"
+                onclick="openContactModal()"
+              >
+                CALL ME NOW
+              </button>
+              <a
+                href="tel:4805550103"
+                class="text-white text-decoration-none fw-bold"
+              >
+                <i class="fas fa-phone me-2"></i>+92 310-4483820
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ <!------------------------------------------------------ Footer -->
+    <footer class="footer bg-dark text-white py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <h5 class="fw-bold mb-3">Investment Department</h5>
+            <p class="mb-2">
+              <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+              5400 Elite House, Lahore, Pakistan
+            </p>
+            <p class="mb-2">
+              <i class="fas fa-phone me-2 text-primary"></i>
+              +92 310-4483820
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h5 class="fw-bold mb-3">Contact With us</h5>
+            <p class="mb-2">
+              <i class="fas fa-envelope me-2 text-primary"></i>
+              alit7822@gmail.com
+            </p>
+            <p class="mb-2">
+              <i class="fas fa-clock me-2 text-primary"></i>
+              Mon - Fri: 9:00 AM - 6:00 PM
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h5 class="fw-bold mb-3">Social Links</h5>
+            <div class="social-links">
+              <a href="https://www.facebook.com/share/1Avoq9pkCJ/" class="text-white me-3 fs-5"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white me-3 fs-5"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="https://www.instagram.com/mistr_zahid?igsh=MW5ueGkwYTA5cTZjOQ==" class="text-white me-3 fs-5"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/zahid-ali-2a4ba3339/" class="text-white me-3 fs-5"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="text-white fs-5"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr class="my-4 opacity-25" />
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="mb-0">
+              &copy; 2025 ELITE HOUSE. Created by Zahid Ali. All rights
+              reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="#" class="text-white text-decoration-none me-3"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-white text-decoration-none"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+<!----------------------------------- Contact Modal -->
+    <div
+      class="modal fade"
+      id="contactModal"
+      tabindex="-1"
+      aria-labelledby="contactModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title fw-bold" id="contactModalLabel">
+              Contact Us
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="fullName" class="form-label fw-semibold"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fullName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="phoneNumber" class="form-label fw-semibold"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phoneNumber"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="emailAddress" class="form-label fw-semibold"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailAddress"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="propertyType" class="form-label fw-semibold"
+                  >Property Interest</label
+                >
+                <select class="form-select" id="propertyType">
+                  <option value="">Select property type</option>
+                  <option value="studio">Studio Apartment</option>
+                  <option value="one-bedroom">One Bedroom</option>
+                  <option value="two-bedroom">Two Bedroom</option>
+                  <option value="investment">Investment Opportunity</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label fw-semibold"
+                  >Message</label
+                >
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="3"
+                  placeholder="Tell us about your requirements..."
+                ></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer border-0">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary fw-semibold"
+              onclick="submitContactForm()"
+            >
+              Send Message
+            </button>
+            <a href="tel:+92 310-4483820" class="btn btn-success fw-semibold">
+              <i class="fas fa-phone me-2"></i>Call Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+  
+</html>
