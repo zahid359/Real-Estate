@@ -1,4 +1,4 @@
-// Woodmart Real Estate Website JavaScript
+// ELITE HOUSE Real Estate Website JavaScript
 
 // Declare bootstrap variable
 const bootstrap = window.bootstrap
